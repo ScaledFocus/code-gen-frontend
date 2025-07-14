@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "Read and Analyze Backend Dependencies and Structure",
+    "files": [],
+    "description": "This step ensures a full understanding of backend dependencies (what libraries and versions are available) and existing configuration for database, as well as the package namespace for entity/service/controller placement. Lays the foundation for proper backend implementation."
+  },
+  {
+    "id": 2,
+    "title": "Implement Document Entity and Repository",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/main/java/com/examly/springapp/model/Document.java", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/main/java/com/examly/springapp/repository/DocumentRepository.java"],
+    "description": "Establishes the persistence-layer backbone of the application by defining the Document entity (with appropriate field-level validation) and the repository interface for CRUD operations."
+  },
+  {
+    "id": 3,
+    "title": "Implement Document Service Layer",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/main/java/com/examly/springapp/service/DocumentService.java"],
+    "description": "Implements the business logic for managing documents and serves as an abstraction between the repository and the controller. Ensures error scenarios are properly handled for future test cases."
+  },
+  {
+    "id": 4,
+    "title": "Implement Document REST Controller",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/main/java/com/examly/springapp/controller/DocumentController.java"],
+    "description": "Exposes the CRUD operations through RESTful APIs with error and validation handling as expected by the tests and frontend integration."
+  },
+  {
+    "id": 5,
+    "title": "Implement All Backend Test Cases (JUnit)",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/test/java/com/examly/springapp/controller/DocumentControllerTest.java", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/test/java/com/examly/springapp/service/DocumentServiceTest.java", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/springapp/src/test/java/com/examly/springapp/model/DocumentModelTest.java"],
+    "description": "Implements every backend test case from the JSON. Tests must include: correct folder/file presence, correct field validation, proper service/controller logic for all CRUD, error scenarios, and business rules. All dependencies (repositories/services) must be mocked appropriately."
+  },
+  {
+    "id": 6,
+    "title": "Compile and Test Backend",
+    "files": [],
+    "description": "Ensure backend compiles and all backend tests pass before proceeding to frontend. Verifies the implemented entity/service/controller and their corresponding tests adhere to requirements."
+  },
+  {
+    "id": 7,
+    "title": "Read and Analyze Frontend Dependencies and Structure",
+    "files": [],
+    "description": "Confirms available React features and sets the stage for organizing new components and their tests. Ensures plan is compatible with current project structure and dependencies."
+  },
+  {
+    "id": 8,
+    "title": "Create React Utility Files (API handler, constants, helpers)",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/utils/api.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/utils/constants.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/utils/helpers.js"],
+    "description": "Centralizes REST interaction, URLs, and validation logic for easy reuse in all components. Helps support clean, DRY component code and easier testing/mocking."
+  },
+  {
+    "id": 9,
+    "title": "Create DocumentList Component and Associated Test",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/components/DocumentList.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/components/DocumentList.test.js"],
+    "description": "Handles document display and list event handling, ensures UI is testable and meets requirements for document viewing, editing, and deletion. Tests cover main list interaction, state, and error scenarios (mapping to DocumentList-related tests in JSON)."
+  },
+  {
+    "id": 10,
+    "title": "Create DocumentForm Component and Associated Test",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/components/DocumentForm.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/components/DocumentForm.test.js"],
+    "description": "Supports creation and editing flows with proper input validation and error handling. Test file covers form rendering, user interactions for both creation and update, and edge/error states."
+  },
+  {
+    "id": 11,
+    "title": "Update App.js for Integration and Add/Refactor App.test.js",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/App.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/App.test.js"],
+    "description": "Integrates list and form in the overall app shell, managing document state, selection, and errors. Ensures main application entry point is fully test-covered."
+  },
+  {
+    "id": 12,
+    "title": "Implement All Frontend Test Cases (Jest/RTL)",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/components/DocumentList.test.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/components/DocumentForm.test.js", "/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/App.test.js"],
+    "description": "Implements required Jest/RTL test cases with proper mocking (API), UI interaction simulation, error state validation, and correct selectors for DOM queries. Ensures complete test coverage as required."
+  },
+  {
+    "id": 13,
+    "title": "Add and Refine Styling (App.css and Component-level Styling)",
+    "files": ["/Users/abcom/Desktop/github/project_question_generator/project_questions/scratchpad/solution_3c1910a2-7d5c-4d86-8431-852d5563b786/reactapp/src/App.css"],
+    "description": "Applies required UI/UX design system: CSS variables, layout, error states, accent colors, button system, etc., as detailed in the styling guidelines and expected by UI-related tests."
+  },
+  {
+    "id": 14,
+    "title": "Build, Lint, and Test Frontend (React)",
+    "files": [],
+    "description": "Ensures all frontend code compiles, is linted to standard, and all required Jest/RTL tests pass. Verifies successful integration and error-free final build."
+  }
+] 
